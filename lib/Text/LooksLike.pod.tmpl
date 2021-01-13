@@ -17,7 +17,7 @@ This method was added in version [% version %] of the module.
 
 =head1 NAME
 
-[% info.colon %] - abstract here.
+[% info.colon %] - make guesses about snippets of text
 
 =head1 SYNOPSIS
 
@@ -31,6 +31,18 @@ corresponding to L<git commit [% commit.commit %]|[% info.repo
 
 =head1 DESCRIPTION
 
+Given a small piece of arbitrary text, try to guess what it might
+contain. For example, the text might be a web address, some database
+SQL, the path to /etc/passwd, a person's name, a number, or random
+ASCII characters.
+
 =head1 FUNCTIONS
+
+=head2 looks_like
+
+    my $guess = looks_like ($text);
+
+Returns a guess about what the text looks like. The result is an
+English word describing what it thinks the contents might be.
 
 [% INCLUDE "author" %]
